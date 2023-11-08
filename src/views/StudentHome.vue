@@ -58,12 +58,12 @@ const retrieveStuAcc = () => {
 
 const studisplay = (stuAcc) => stuAcc.accommodationId + " " + stuAcc.semester;
 
-// const deleteAcc = () => {
-//   accServices.delete(selectedAcc.value)
-//     .finally(() => {
-//         router.go();
-//     });
-// };
+const deleteAcc = () => {
+  accServices.delete(selectedAcc.value)
+    .finally(() => {
+        router.go();
+    });
+};
     
 const newAcc =() => {
      router.push({ name: 'add'});

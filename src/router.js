@@ -13,6 +13,7 @@ import NewRequest from "./views/NewSAcc.vue";
 import ViewAcc from "./views/ViewAcc.vue";
 import ViewStudent from "./views/ViewStudent.vue";
 import CourseSchedule from "./views/ViewCourseSchedule.vue";
+import FacStuView from "./views/FacultyStudentView.vue";
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -82,6 +83,12 @@ const router = createRouter({
       path: "/view/:id",
       name: "view",
       component: ViewStudent,
+      props: true,
+    },
+    {
+      path: "/viewSF/:id",
+      name: "viewSF",
+      component: FacStuView,
       props: true,
     },
     {

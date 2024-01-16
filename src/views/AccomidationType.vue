@@ -26,7 +26,7 @@ const retrieveAcc = () => {
 
 retrieveAcc();
 
-const display = (accomadation) => accomadation.title + " " + accomadation.id;
+const display = (accomadation) => accomadation.title + " - " + accomadation.type;
 
 const deleteAcc = () => {
   accServices.delete(selectedAcc.value)
@@ -91,7 +91,7 @@ const SearchStudent =() => {
   
 
  <div class="column">    
-        <h2>Current Accomadation Types</h2>
+        <h2>Current Accommodations</h2>
 <div class="card flex justify-content-center">
         <Listbox v-model="selectedAcc"  :options='accomadation' filter :optionLabel= 'display' optionValue="id" 
         :virtualScrollerOptions="{ itemSize: 38 }" class="w-full md:w-14rem" listStyle="height:450px" />

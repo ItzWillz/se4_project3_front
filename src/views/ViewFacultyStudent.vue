@@ -19,13 +19,13 @@ const selectedStudentAcc = ref();
 });
 
 console.log(props.id);
-const studentAcc = ref([]);
+const stuAcc = ref([]);
 const academicStuAcc = ref([]);
 
 const retrieveStudentAcc = () => {
   stuAccServices.getAllAcademic(props.id, 9, 9)
     .then((response) => {
-      studentAcc.value = response.data;
+      stuAcc.value = response.data;
     })
     .catch((e) => {
         console.log(e);
@@ -35,7 +35,7 @@ const retrieveStudentAcc = () => {
 
 retrieveStudentAcc();
 
-const studisplay = (stuAcc) => stuAcc.accommodationId + " " + stuAcc.semester;
+const studisplay = (stuAcc) => stuAcc.accommodationId + " - " + stuAcc.semester;
 
 const viewStudentAcc = () => {
   if (!selectedStudentAcc.value) {
@@ -57,7 +57,7 @@ const Return = () => {
  <v-row style="margin-top=0.1rem">    
   <v-col>
     <h3> Accommodations</h3>
-        <Listbox v-model="selectedStudentAcc"  :options='studentAcc' :optionLabel= 'studisplay' optionValue="id" 
+        <Listbox v-model="selectedStudentAcc"  :options='stuAcc' :optionLabel= 'studisplay' optionValue="id" 
         :virtualScrollerOptions="{ itemSize: 38 }" class="w-full md:w-14rem" listStyle="height:450px; margin-top: 0.2rem; margin-left: 0.2rem;" />
 
     </v-col>

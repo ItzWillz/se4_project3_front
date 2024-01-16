@@ -26,7 +26,7 @@ const retrieveStudent = () => {
     });
 };
 
-const display = (students) => students.name + " " + students.id + " " + students.email;
+const display = (students) => students.name + " - " + students.id + " - " + students.email;
 console.log(display);
 
 retrieveStudent();
@@ -70,8 +70,8 @@ const AccomadationType =() => {
       </div>
       <h2 style="text-align: center;">Other Actions</h2>
       <div class="text-center" >
-       <button class=test @click="AdminHome()">View All Requests</button>
-       <button class=test @click="AccomadationType()">View Accomadations</button>
+       <button style="width:fit-content" class=test @click="AdminHome()">View All Requests</button>
+       <button style="width:fit-content" class=test @click="AccomadationType()">View Accommodations</button>
       </div>
   </v-col>
 </v-row>

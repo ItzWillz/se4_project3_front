@@ -71,7 +71,7 @@ const Return = () => {
     <v-col> 
       <h1 style="text-align: center;">Actions</h1>
           <div class="text-center">
-        <button style="width:150px; height:60px" @click="viewStudentAcc(student)">View Accomodation</button>
+        <button style="width:150px; height:60px" @click="viewStudentAcc(student)">View Accommodation</button>
         <button style="width:150px; height:60px" @click="deleteAcc(accomadation)">Delete</button>
               </div>
        

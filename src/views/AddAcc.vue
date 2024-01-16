@@ -40,7 +40,7 @@ const returnHome = () => {
 <template>
 
 <div style="background-color: maroon; width 100%; height:50px; display:block;">
-      <h1 style="color:white; text-align:center; margin:0px; padding-top:5px;">New Accomadation Type</h1>
+      <h1 style="color:white; text-align:center; margin:0px; padding-top:5px;">New Accommodation</h1>
       </div>
     <v-form v-model="valid" style="padding-top:20px;">
 

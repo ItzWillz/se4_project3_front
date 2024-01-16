@@ -30,7 +30,7 @@ facultyServices.getFacultyIdByUserId(Utils.getStore("user").userId)
 });
 
 
-const display = (students) => students.name + " " + students.id;
+const display = (students) => students.name + " - " + students.id;
 
 
 const viewStudentAcc = () => {
